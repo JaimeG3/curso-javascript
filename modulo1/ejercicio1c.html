@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>pedido</h1>
+    <script>
+        const jamon = 3000
+         const helado = 1000
+        const salsas = 500
+        const piña = 2000
+        var total = 6000
+
+        const pizza = prompt("que topping desea")
+
+        if (pizza === 'jamon') {
+            total += jamon
+        } else if (pizza === "helado") {
+            total += helado
+        } else if (pizza === "salsas") {
+            total += salsas
+        } else if (pizza === "piña") {
+            total += piña
+        } else {
+            alert(`"no tenemos del topping ${pizza}`)
+        }
+
+            alert(`el costo final de la pizza es ${total}`)
+    </script>
+        
+</body>
+</html>
