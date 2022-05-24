@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Ciclos
+    const listaEstudiantes = ['Anderson', 'RIcardo', 'Cristhian', 'Martha', 'David', 'Jaime']
+
+    // alert(listaEstudiantes[0])
+    // alert(listaEstudiantes[1])
+    // alert(listaEstudiantes[2])
+    // alert(listaEstudiantes[3])
+    // alert(listaEstudiantes[4])
+    // alert(listaEstudiantes[5])
+
+    /* pasos para hacer un ciclo
+        paso 1 = definir mi contador
+        paso 2 = definir la condicion de parada 
+        paso 3 = modiciar el contador
+    */
+    var contador = 0   
+    while (contador != 6) {
+        alert(listaEstudiantes[contador] + contador)
+        contador = contador + 1
+    }
+
+    for (var contador = 0; contador != 6; contador++ ) {
+        alert(listaEstudiantes[contador] + contador)
+    }
+
+    // contador + 1 y hacer contador++ es lo mismo
+</script>

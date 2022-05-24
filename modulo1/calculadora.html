@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ejercicio calculadora
+ //Pedir dos numeros al usuario y mostrar el resultado de multiplicarlos, dividirlos, sumarlos y restarlos
+
+ var numero1 = prompt('dame un numero')
+ var numero2 = prompt('dame el segundo numero')
+ if (isNaN(numero1) || isNaN(numero2)) {
+     alert('solo se aceptan numeros')
+ } else if (numero1 * numero2) {
+ numero1 = parseInt(numero1)
+ numero2 = parseInt(numero2)
+ alert(`total multiplicado ${numero1 * numero2}`)
+ alert(`total sumado ${numero1 + numero2}`)
+ alert(`total restado ${numero1 - numero2}`)
+ alert(`total dividido ${numero1 / numero2}`)
+ } 
+    </script>
+</body>
+</html>

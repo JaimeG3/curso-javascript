@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * NUmeros mayores y menores
+         * Pograma que pide al usuario 2 numeros y dice cual numero es mayor y cual es menor
+        */
+            var numero1 = prompt('dame el primer numero')
+            var numero2 = prompt('dame el segundo numero')
+        
+            // si el numero1 o numero2 no son numeros entonces muestro una alerta
+            if (isNaN(numero1) || isNaN(numero2)) {
+              alert('solo se aceptan numeros')
+            } else {
+            // cambio los numero en formato texto a tipi numero '1' = 1
+            numero1 = parseInt(numero1)
+            numero2 = parseInt(numero2)
+        
+            if (numero1 > numero2) {
+              console.log (`El numero mayor es el ${numero1}`)
+            } else {
+              console.log (`El numero mayor es el ${numero2}`)
+            }
+            }
+        /**
+         * Imprimir numeros en un rango
+         * Pedir al usuario dos numeros, luego imprimir los numeros entre esos dos numeros
+        */
+            var numero1 = prompt('dame el primer numero')
+            var numero2 = prompt('dame el segundo numero')
+        
+            if (isNaN(numero1) || isNaN(numero2)) {
+              alert('solo se aceptan numeros')
+            } else {
+              numero1 = parseInt(numero1)
+              numero2 = parseInt(numero2)
+        
+              for (var contador = numero1;contador <= numero2; contador++) {
+                  alert(contador)
+              }
+            }
+            </script>
+    
+</body>
+</html>
