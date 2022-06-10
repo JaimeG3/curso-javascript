@@ -38,6 +38,8 @@ let dinero = 10000
         cantidad: 5,
       }
     }
+
+    
     const pedir = () => {
       const tipoDeProducto = (prompt("Que producto desea adquirir brah (pizza,hamburguesa,empanada,gaseosa,pan)"))
       const productoPedido = productos[tipoDeProducto]
@@ -50,30 +52,38 @@ let dinero = 10000
       } 
       const pago = parseInt(prompt(`el precio es de  (${productoPedido.precio}) Con cuanto vas a pagar? `))
       if ( pago < productoPedido.precio) {
+        alert("no tienes el dinero suficiente")
         return
       } else if (( pago - productoPedido.precio) > dinero) {
-        alert (' zyzz machine no cuenta cin suficiente dinero para devolver')
+        alert (' zyzz machine no cuenta con suficiente dinero para devolver')
         return
       }
-
+      
       const cambio = pago  - productoPedido.precio
       dinero -= cambio
       alert(`, el cambio es de: ${cambio}. good luck brah`)
       
       productos[tipoDeProducto].cantidad -= 1
             dinero += pago 
-    }
-
+          }
+          
     const agregar = () => {
-      const tipoDeProducto = parseInt(prompt("Que producto desea agregar brah (pizza,hamburguesa,empanada,gaseosa,pan)"))
+      const tipoDeProducto = (prompt("Que producto desea agregar brah (pizza,hamburguesa,empanada,gaseosa,pan)"))
       const productoRecargado = parseInt(prompt("Cantidad "))
       productos[tipoDeProducto].cantidad += productoRecargado
-      alert('Agregado ')
+      alert('Agregado a zyzz machine ')
     }
+
 
     function Reporte () {
       alert(JSON.stringify(productos) + dinero)
-    }
+      return //for (const tipoDeProducto in productos){
+    } 
+        //alert(productos[property] ) 
+        //alert(productos[contador] + contador)
+        //alert(array = object.entries(productos))    }
+ 
+    
 
   </script>
   <button type="button" onclick="pedir()">pedir</button>
