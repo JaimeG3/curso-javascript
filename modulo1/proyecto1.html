@@ -20,38 +20,41 @@ let dinero = 10000
       hamburguesa: {
         precio: 5000,
         cantidad: 5,
+        numero: 1,
       },
       pizza: {
         precio: 6000,
         cantidad: 5,
+        numero: 2,
       },
-      Empanada: {
+      empanada: {
         precio: 2000,
         cantidad: 5,
+        numero: 3,
       },
-      Gaseosa: {
+      gaseosa: {
         precio: 1500,
-        cantidad: 5, 
+        cantidad: 5,
+        numero: 4, 
       },
       pan: {
         precio: 500,
         cantidad: 5,
+        numero: 5,
       }
     }
 
     
     const pedir = () => {
-      const tipoDeProducto = (prompt("Que producto desea adquirir brah (pizza,hamburguesa,empanada,gaseosa,pan)"))
+      const tipoDeProducto = (prompt("Que producto desea adquirir brah"  ))
       const productoPedido = productos[tipoDeProducto]
-      if (productos.cantidad === 0) {
+      if (!productoPedido  || productoPedido.cantidad === 0) {
         alert('zyzz machine no cuenta con la cantidad de este producto')
         return
-      }  else if  (productoPedido === ['pizza','hamburguesa']){
-        alert('El producto no se encuentra en zyzz machine')
-        return
+
       } 
-      const pago = parseInt(prompt(`el precio es de  (${productoPedido.precio}) Con cuanto vas a pagar? `))
-      if ( pago < productoPedido.precio) {
+      const pago = parseInt(prompt(`el precio es de  (${productoPedido.precio }) Con cuanto vas a pagar? `))
+      if ( pago < productoPedido.precio ) {
         alert("no tienes el dinero suficiente")
         return
       } else if (( pago - productoPedido.precio) > dinero) {
@@ -64,7 +67,7 @@ let dinero = 10000
       alert(`, el cambio es de: ${cambio}. good luck brah`)
       
       productos[tipoDeProducto].cantidad -= 1
-            dinero += pago 
+            dinero += productoPedido.precio 
           }
           
     const agregar = () => {
