@@ -5,10 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-</head>
-<body>
-  <h1>zyzz machine </h1>
+  <link rel="stylesheet" href="edisionP1.css" >
+</head >
+<header class= "cabeza">
+<h1>zyzz machine </h1>
   <h7>bienvenidos :</h7>
+</header>
+<body>
+  <ul>
+<li>hamburguesa
+  codigo1</li>
+<li>pizza:codigo2</li>
+<li>empanada:codigo3</li>
+<li>gaseosa:codigo4</li>
+<li>pan:codigo5</li>
+  </ul>
 
 </html>
 <table class ="table" id="tabla">
@@ -17,42 +28,44 @@
 <script>
 let dinero = 10000
     const productos = {
-      hamburguesa: {
+      1: {
         precio: 5000,
         cantidad: 5,
-        numero: 1,
+        nombre:"hamburgesa",
       },
-      pizza: {
+      2: {
         precio: 6000,
         cantidad: 5,
-        numero: 2,
+        nombre:"pizza",
       },
-      empanada: {
+      3: {
         precio: 2000,
         cantidad: 5,
-        numero: 3,
+        nombre:"empanada",
       },
-      gaseosa: {
+      4: {
         precio: 1500,
         cantidad: 5,
-        numero: 4, 
+        nombre:"gaseosa", 
       },
-      pan: {
+      5: {
         precio: 500,
         cantidad: 5,
-        numero: 5,
+        nombre:"pan",
       }
     }
 
-    
+  
     const pedir = () => {
       const tipoDeProducto = (prompt("Que producto desea adquirir brah"  ))
       const productoPedido = productos[tipoDeProducto]
-      if (!productoPedido  || productoPedido.cantidad === 0) {
+      if (!productoPedido  && productoPedido.cantidad === 0) {
         alert('zyzz machine no cuenta con la cantidad de este producto')
         return
+      } else if (tipoDeProducto == undefined) {
+        alert("con gusto")
+      }
 
-      } 
       const pago = parseInt(prompt(`el precio es de  (${productoPedido.precio }) Con cuanto vas a pagar? `))
       if ( pago < productoPedido.precio ) {
         alert("no tienes el dinero suficiente")
@@ -85,7 +98,9 @@ let dinero = 10000
         //alert(productos[property] ) 
         //alert(productos[contador] + contador)
         //alert(array = object.entries(productos))    }
- 
+     
+
+      
     
 
   </script>
@@ -93,3 +108,4 @@ let dinero = 10000
   <button type="button" onclick="Reporte()">reporte</button>
   <button type="button" onclick="agregar()">agregar</button>
 </body>
+

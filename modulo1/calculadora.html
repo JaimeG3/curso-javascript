@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+    <title>CALCULADORA</title>
+    <meta author="jAIME" content="calculadora"/>
+    <meta name="pagina solo para operar" content="width=>, initial-scale=1.0">
+    
 </head>
-<body>
-    <script>
-        // Ejercicio calculadora
- //Pedir dos numeros al usuario y mostrar el resultado de multiplicarlos, dividirlos, sumarlos y restarlos
 
- var numero1 = prompt('dame un numero')
+<body>
+
+<H1>calculadora</H1>
+<h4>suma,resta,multiplica,divide</h4>
+
+<nav>
+<li><button type="button" onclick="Pnumero() ">comenzar  </button></li>
+</nav>
+ 
+<section>
+<article>
+ <p> <i> esta calculadora esta diseñada para agilizar los procesos humanos </i></p>
+</article>
+
+<article>
+    <hrgroup>
+    <h2>advertencia</h1>
+    <h1>leer con atencion</h2>
+    </hrgroup>
+<li>si registran alguna <strong><u>letra</u> </strong> no les dara la operacion</li>
+<li>porfavor registrar bien los signos</li>
+</article>
+
+
+</section>
+
+    <script>
+    
+ var Pnumero = () => { var numero1 = prompt('dame un numero')
  var numero2 = prompt('dame el segundo numero')
+ var signo = prompt("dame un signo para realizar la operacion")
  if (isNaN(numero1) || isNaN(numero2)) {
      alert('solo se aceptan numeros')
  } else if (numero1 * numero2) {
  numero1 = parseInt(numero1)
  numero2 = parseInt(numero2)
- alert(`total multiplicado ${numero1 * numero2}`)
- alert(`total sumado ${numero1 + numero2}`)
- alert(`total restado ${numero1 - numero2}`)
- alert(`total dividido ${numero1 / numero2}`)
- } 
+ if (signo === "x" ) 
+ {alert(`total multiplicado ${numero1 * numero2}`)
+}
+ else if (signo === "+" ) 
+    {alert(`total sumado ${numero1 + numero2}`)
+ } else if (signo === "-"){
+    alert(`total restado ${numero1 - numero2}`)
+ } else if(signo === "/"){
+    alert(`total dividido ${numero1 / numero2}`)
+ } else if(signo != "+", "-", "x" ){
+     alert("digito no valido para operar")
+ }
+  }  }
     </script>
+
+
+
 </body>
 </html>

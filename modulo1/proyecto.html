@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>maquina explendedora</h1>
+    <script>
+        var dineroMaquina = 10000
+        const maquina = {
+        gaseosa: {   
+        cantidad:5,
+        precio: 2000,
+    },
+        empanada : {
+        cantidad:5,
+        precio : 4000,
+    },
+        papas : {
+        cantidad:5,
+        precio : 4000,
+    },
+        te : {
+        cantidad:5,
+        precio : 4000,
+    },
+        helado : {
+        cantidad:5,
+        precio : 4000,
+
+    }
+
+        }
+
+    const pedirProducto = () => {
+      const tipoProducto = (prompt("Que producto quiere comprar (gaseosa,empanada,papas,te,helado)"))
+      const producto = maquina[tipoProducto]
+      if (producto.cantidad === 0) {
+        alert('El producto no esta disponible por el momento, por favor elige otro')
+        return
+     } else if ()
+     const pago = parseInt(prompt(`Valor (${producto.precio}) Con cuanto pagas? (Ingresa el valor)`))
+     if (pago < producto.precio) {
+        return
+      } else if ((pago - producto.precio) > dinero) {
+        alert ('La maquina no tiene suficiente cambio elige otro producto o vuelve luego')
+        return
+      }
+      const cambio = pago - producto.precio
+      dinero -= cambio
+      alert(`Esperamos disfrute su prducto , su cambio es de: ${cambio}. Adios`)
+      productos[tipoDeProducto].cantidad -= 1
+      dinero += pago
+
+     </script>
+    <button type="button" onclick="pedir()">pedir</button>
+    
+
+    </body>
+    </html>

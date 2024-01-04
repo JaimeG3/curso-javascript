@@ -1,0 +1,16 @@
+.cabeza {
+background-color: black;
+color: aqua;
+font-display:2px;  
+margin: 3px;
+}
+*{
+
+    margin: 3px;
+    background-color: blanchedalmond;
+    color: black;
+    font: bold 20px calibri;
+    text-align: center;
+padding: 2px;
+padding-left: 2px;
+}
