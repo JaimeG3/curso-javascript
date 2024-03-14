@@ -75,6 +75,17 @@ function getCount(str) {
   // Split Strings
   function solution(str) {
     const result = [];
+    str.split("").forEach((char, index, array) => {
+        if (index % 2 === 0) {
+            result.push(char + (array[index + 1] || "_"));
+        }
+    });
+    console.log("este es el result", result);
+ }
+
+
+  function solution(str) {
+    const result = [];
     for (let i = 0; i < str.length - 1; i += 2) {
         result.push(str[i] + str[i + 1]);
     }
@@ -84,4 +95,7 @@ function getCount(str) {
     console.log("este es el result", result);
    return result
  }
+
+
+
 
