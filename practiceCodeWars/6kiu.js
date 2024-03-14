@@ -72,3 +72,16 @@ function getCount(str) {
     return array.map((x) => x % 2 ? odd.shift() : x);
   }
 
+  // Split Strings
+  function solution(str) {
+    const result = [];
+    for (let i = 0; i < str.length - 1; i += 2) {
+        result.push(str[i] + str[i + 1]);
+    }
+    if (str.length % 2 !== 0) {
+        result.push(str[str.length - 1] + "_");
+    }
+    console.log("este es el result", result);
+   return result
+ }
+
