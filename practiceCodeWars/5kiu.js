@@ -14,4 +14,27 @@ function rot13(message) {
       }
     }).join("");
   }
-  
+
+
+  // First non-repeating character
+  function firstNonRepeatingLetter(s) {
+    // Add your code here
+   const letters = s.toLowerCase().split("");
+    
+    for (let i = 0; i < letters.length; i++) {
+      let currentLetter = letters[i];
+      if (letters.indexOf(currentLetter) === letters.lastIndexOf(currentLetter)) {
+        return s[i];
+    }
+    }
+     return "";
+  }
+
+  function firstNonRepeatingLetter(s) {
+    for(var i in s) {
+      if(s.match(new RegExp(s[i],"gi")).length === 1) {
+        return s[i];
+      }
+    }
+    return '';
+  }
