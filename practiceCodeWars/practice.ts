@@ -28,3 +28,20 @@ class Coche {
 
 const miCoche = new Coche("Toyota");
 miCoche.conducir();
+
+
+//metodos 
+class MiClase {
+    private metodoPrivado(): void {
+      // Este método solo puede ser llamado desde dentro de la clase.
+    }
+  
+    protected metodoProtegido(): void {
+      // Este método puede ser llamado desde dentro de la clase o de clases derivadas.
+    }
+  
+    public metodoPublico(): void {
+      // Este método puede ser llamado desde cualquier lugar.
+    }
+  }
+  
