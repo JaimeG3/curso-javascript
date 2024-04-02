@@ -44,4 +44,15 @@ class MiClase {
       // Este método puede ser llamado desde cualquier lugar.
     }
   }
+
+  abstract class Figura {
+    abstract calcularArea(): number;
+  }
+  
+  class Circulo extends Figura {
+    calcularArea(): number {
+      // Implementación del método calcularArea para la clase Circulo
+    }
+  }
+  
   
